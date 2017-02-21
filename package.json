@@ -1,0 +1,17 @@
+{
+  "name": "generator-magix-webpack",
+  "version": "0.0.1",
+  "description": "Yeoman generator for using magix with webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "magix3.0",
+    "webpack",
+    "scaffold"
+  ],
+  "author": "zhuping.zp",
+  "license": "MIT"
+}
