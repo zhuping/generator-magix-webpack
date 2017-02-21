@@ -1,0 +1,36 @@
+{
+  "name": "<%= pkgName %>",
+  "version": "<%= version %>",
+  "description": "<%= description %>",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --colors --hot --inline",
+    "build": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= repo %>"
+  },
+  "author": "<%= author %>",
+  "license": "<%= license %>",
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.15",
+    "cross-env": "^3.1.4",
+    "css-loader": "^0.26.1",
+    "exports-loader": "^0.6.3",
+    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "jshint": "^2.9.4",
+    "jshint-loader": "^0.8.3",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "magix-loader": "^1.0.3",
+    "script-loader": "^0.7.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "magix": "^3.2.0",
+    "pat": "0.0.1"
+  }
+}

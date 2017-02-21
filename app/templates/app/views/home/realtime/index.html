@@ -1,0 +1,64 @@
+<div class="mt30 pt20">
+  <div class="f20">账户实时监控</div>
+  <div class="table-container mt30">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>用户ID</th>
+          <th>用户名称</th>
+          <th>BU</th>
+          <th>渠道</th> 
+          <th>设备</th>
+          <th>产品类型</th>
+          <th>业务类型</th>
+          <th>是否日常</th>
+          <th>是否激活</th>
+          <th>账户类型</th>
+          <th>账户标签</th>
+          <th>更新时间</th>
+          <th>责任人</th>
+          <th width="10%">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#for(item in list)}}
+        <tr>
+          <td>{{item.account_id}}</td>
+          <td>{{item.account_name}}</td>
+          <td>{{item.bu}}</td>
+          <td>{{item.channel}}</td>
+          <td>{{item.device}}</td>
+          <td>{{item.product}}</td>
+          <td>{{item.biz_type}}</td>
+          <td>
+            {{#if(item.is_daily == 0)}}
+            活动
+            {{/if}}
+            {{#if(item.is_daily == 1)}}
+            日常
+            {{/if}}
+          </td>
+          <td>
+            {{#if(item.syn_status == 0)}}
+            是
+            {{/if}}
+            {{#if(item.syn_status == -1)}}
+            否
+            {{/if}}
+          </td>
+          <td>{{item.account_type}}</td>
+          <td>{{item.account_subtype}}</td>
+          <td>{{item.gmt_modified}}</td>
+          <td>{{item.owner}}</td>
+          <td>
+            <p class="operation">
+              <a href="#!/account/accountlist/create_account?accountId={{item.account_id}}" class="color-brand mr5">编辑</a>
+              <a href="javascript:;" class="color-brand" bx-name="components/popover" data-width="550" data-content="loading..." data-placement="left" data-title="关联refpid" id="J_{{item.account_id}}_account" mx-mouseenter="showPids({{item.account_id}})">查看PID</a>
+            </p>
+          </td>
+        </tr>
+        {{/for}}
+      </tbody>
+    </table>
+  </div>
+</div>

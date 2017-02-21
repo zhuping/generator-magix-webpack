@@ -1,0 +1,158 @@
+.wrapper {
+  min-width: 1200px;
+  min-height: 200px;
+  position: relative;
+  zoom: 1;
+}
+.wrap {
+  white-space: normal;
+  word-wrap: break-word;
+}
+.main {
+  float: left;
+  width: 100%;
+}
+.inmain {
+  padding: 0 0 100px;
+  min-height: 600px;
+}
+.inmain-padding {
+  padding-left: 50px!important;
+  padding-right: 30px!important;
+}
+.sidebar {
+  float: left;
+  *display: inline;
+  margin-left: -100%;
+}
+.sub-nav {
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #3c434a;
+}
+.sub-nav-wrap {
+  width: 200px;
+  .menu-icon {
+    position: absolute;
+    left: 6px;
+    top: 10px;
+    color: #d7d7d7;
+    display: none;
+    i {
+      font-size: 26px;
+    }
+  }
+  .menu-hold {
+    cursor: pointer;
+    color: #d7d7d7;
+    margin: 13px 0 20px 0;
+    i {
+        font-size: 26px;
+    }
+  }
+  .common-menu {
+    li {
+      height: 40px;
+      line-height: 40px;
+      color: #999;
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+      &.active {
+        color: #fff;
+        background-color: #333;
+        border-left: 4px solid @color-brand;
+        cursor: auto;
+        i {
+          padding-left: 48px;
+        }
+        .icon {
+          left: 4px;
+        }
+      }
+      i {
+        padding-left: 52px;
+        margin-right: 10px;
+        font-size: 20px;
+      }
+      .icon {
+        font-size: 20px;
+        position: absolute;
+        left: 8px;
+        top: 0;
+        display: none;
+      }
+      &.selected {
+        border-left: 4px solid @color-brand;
+      }
+      &.unselected {
+        border-left: 4px solid #333;
+      }
+    }
+  }
+  .bu-entry {
+    li {
+      margin-bottom: 0;
+      line-height: 40px;
+      height: 40px;
+      font-size: 12px;
+      text-indent: 80px;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+/* 公共头 */
+.common-header {
+  height: 50px;
+  line-height: 50px;
+  background-color: @color-brand;
+  color: #fff;
+  overflow: hidden;
+  .logo {
+    width: 200px;
+    height: 50px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    a {
+      color: #fff;
+      font-size: 24px;
+      &.semfont {
+        font-size: 30px;
+      }
+      em {
+        font-size: 14px;
+        font-style: normal;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .nav {
+    float: left;
+    font-size: 14px;
+    margin-left: 20px;
+    li {
+      float: left;
+      padding: 0 30px;
+      &.active a {
+        color: #fff;
+        .opacity(100)
+      }
+    }
+    a {
+      color: #fff;
+      .opacity(55);
+      &:focus,
+      &:hover {
+        color: #fff;
+        .opacity(100);
+      }
+    }
+  }
+}

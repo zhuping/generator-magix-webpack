@@ -1,0 +1,16 @@
+<div class="common-header clearfix">
+  <div class="logo">
+    <a class="semfont" href="#!/home/liveroom/index">&#xe625;</a>
+    <a href="#!/home/liveroom/index">SEM<em>运营平台</em></a>
+  </div>
+  <ul class="nav">
+  {{#for(item in menuList)}}
+    <li t-class:active="item.active"><a href="#!{{item.path}}">{{item.text}}</a></li>
+  {{/for}}
+  </ul>
+  <div class="fr mr30">
+    <a href="//op.sem.taobao.org/job/index" target="_blank" class="color-white">
+      <i class="semfont f20 mr5">&#xe605;</i>返回旧版
+    </a>
+  </div>
+</div>

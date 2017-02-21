@@ -1,0 +1,61 @@
+<div class="mt30 pt20">
+  <div class="f20">直播间</div>
+  <div class="table-container mt30">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>分配者</th>
+          <th>执行媒体</th>
+          <th>账户类型</th>
+          <th>账户标签</th>
+          <th>BU</th>
+          <th>分配时间</th> 
+          <th>最近更新时间</th>
+          <th>更新次数</th>
+          <th>总词数</th>
+          <th>未Review品类数</th>
+          <th>未分组数</th>
+          <th>黑名单词数</th>
+          <th width="10%">状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#for(item in list)}}
+        <tr>
+          <td>{{item.creator}}</td>
+          <td>{{item.media}}</td>
+          <td>{{item.account_type}}</td>
+          <td>{{item.account_type_tag}}</td>
+          <td>{{item.bu}}</td>
+          <td>{{item.start_time}}</td>
+          <td>{{item.finish_time}}</td>
+          <td>{{item.update_number}}</td>
+          <td>{{item.all_number}}</td>
+          <td>{{item.no_review_number}}</td>
+          <td>{{item.no_group_number}}</td>
+          <td>{{item.black_number}}</td>
+          <td>
+            {{#if(item.status == 'REVIEW_ASSIGNING')}}
+            <span class="color-red mr5">结果未提交</span>
+            <a href="javascript:;" class="color-brand" mx-click="stop({{item.task_id}})">停止</a>
+            {{/if}}
+            {{#if(item.status == 'REVIEW_UPDATING')}}
+            <span class="color-yellow">数据更新中</span>
+            {{/if}}
+            {{#if(item.status == 'REVIEW_SUBMITTED')}}
+            <a href="javascript:;" class="color-yellow underline mr5" mx-click="review({{item.task_id}})">再次review</a>
+            <a href="javascript:;" class="color-brand underline" mx-click="confirm({{item.task_id}})">确认</a>
+            {{/if}}
+            {{#if(item.status == 'REVIEW_CHECKED')}}
+            <span class="color-green">已确认</span>
+            {{/if}}
+            {{#if(item.status == 'REVIEW_SUSPEND')}}
+            <span class="color-red">被终止</span>
+            {{/if}}
+          </td>
+        </tr>
+        {{/for}}
+      </tbody>
+    </table>
+  </div>
+</div>
