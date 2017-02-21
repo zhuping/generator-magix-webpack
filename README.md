@@ -1,4 +1,4 @@
-# generator-magix-app
+# generator-magix-webpack
 
 Yeoman generator for using magix with webpack
 
@@ -11,9 +11,9 @@ Install the required tools: `yo`, `gulp`, `bower`
 npm install -g yo gulp bower
 ```
 
-Install `generator-magix-app`:
+Install `generator-magix-webpack`:
 ```
-npm install -g generator-magix-app
+npm install -g generator-magix-webpack
 ```
 
 Make a new directory, and `cd` into it:
@@ -21,4 +21,4 @@ Make a new directory, and `cd` into it:
 mkdir my-new-project && cd $_
 ```
 
-Run `yo magix-app`
+Run `yo magix-webpack`
